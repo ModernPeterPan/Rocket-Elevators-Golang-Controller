@@ -21,7 +21,7 @@ func NewBattery(_id, _amountOfColumns, _amountOfFloors, _amountOfBasements, _amo
 
 	if _amountOfBasements > 0 {
 		b.createBasementFloorRequestButtons(_amountOfBasements)
-		b.createBasmentColumn(_amountOfBasements, _amountOfElevatorPerColumn)
+		b.createBasementColumn(_amountOfBasements, _amountOfElevatorPerColumn)
 		_amountOfColumns--
 	}
 	b.createFloorRequestButtons(_amountOfFloors)
@@ -30,7 +30,7 @@ func NewBattery(_id, _amountOfColumns, _amountOfFloors, _amountOfBasements, _amo
 	return b
 }
 
-func (b *Battery) createBasmentColumn(_amountOfBasements int, _amountOfElevatorPerColumn int) {
+func (b *Battery) createBasementColumn(_amountOfBasements int, _amountOfElevatorPerColumn int) {
 	var servedFloors []int
 	floor = -1
 
